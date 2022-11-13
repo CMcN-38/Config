@@ -1,0 +1,12 @@
+" VIMRC FILE
+
+
+" Enable Syntax Highlighting
+syntax on
+
+" Line Numbers
+set number
+set relativenumber
+
+" Move viminfo file from the home directory
+set viminfo+=n~/.config/vim/viminfo
