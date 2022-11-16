@@ -7,6 +7,79 @@ syntax on
 " Line Numbers
 set number
 set relativenumber
+highlight LineNr ctermfg=grey
+
 
 " Move viminfo file from the home directory
 set viminfo+=n~/.config/vim/viminfo
+
+" Set compatability to ensure vi loads vim
+set nocompatible
+
+" Change window title to be the name of the file being worked on
+set title
+
+" Set scrolloff to be a larger number to maintain a more central line
+set scrolloff=8
+
+set showmode
+
+" Change search settings to show matches and highlight words
+set showmatch
+set hlsearch
+
+" Enable fuzzy search
+set path+=**
+set wildmenu
+set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
+
+" Enable the cursor to change between block and bar based on mode
+let &t_SI.="\e[6 q"
+let &t_EI.="\e[2 q"
+
+let &t_SI ="\<Esc>]50;CursorShape=3\x7"
+let &t_EI ="\<Esc>]50;CursorShape=4\x7"
+
+"zo to open folds
+"zc to close folds
+" VIMSCRIPT ------------------------------------------- {{{
+
+" Enable code folding
+augroup filetype_vim
+	autocmd!
+	autocmd FileType vim setlocal foldmethod=marker
+augroup END
+
+" More vim scripts go here
+
+"}}}
+
+" STATUS LINE ------------------------------------------- {{{
+
+" Status bar code goes here
+
+"}}}
+
+
+" PLUGINS ------------------------------------------- {{{
+
+" Plugin code goes here
+
+"}}}
+
+
+" MAPPINGS ------------------------------------------- {{{
+
+" Remapping code goes here
+
+" Map the enter keys to insert lines in command mode also
+map <Enter> o<ESC>
+map <S-Enter> O<ESC>
+
+"}}}
+
+
+
+
+
+
