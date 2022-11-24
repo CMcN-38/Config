@@ -1,12 +1,11 @@
 format = """
-[](#9A348E)\
 $username\
-[](bg:#DA627D fg:#9A348E)\
+[](bg:#50fa7b fg:#8be9fd)\
 $directory\
-[](fg:#DA627D bg:#FCA17D)\
+[](fg:#50fa7b bg:#ff79c6)\
 $git_branch\
 $git_status\
-[](fg:#FCA17D bg:#86BBD8)\
+[](fg:#Ff5555 bg:#86BBD8)\
 $c\
 $elixir\
 $elm\
@@ -31,12 +30,12 @@ $time\
 # You can also replace your username with a neat symbol like  to save some space
 [username]
 show_always = true
-style_user = "bg:#9A348E"
+style_user = "bg:#8be9fd fg:#44475a"
 style_root = "bg:#9A348E"
 format = '[$user ]($style)'
 
 [directory]
-style = "bg:#DA627D"
+style = "bg:#50fa7b fg:#44475a"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
@@ -76,11 +75,11 @@ format = '[ $symbol ($version) ]($style)'
 
 [git_branch]
 symbol = ""
-style = "bg:#FCA17D"
+style = "bg:#ff79c6"
 format = '[ $symbol $branch ]($style)'
 
 [git_status]
-style = "bg:#FCA17D"
+style = "bg:#ff5555"
 format = '[$all_status$ahead_behind ]($style)'
 
 [golang]
@@ -127,4 +126,4 @@ format = '[ $symbol ($version) ]($style)'
 disabled = false
 time_format = "%R" # Hour:Minute Format
 style = "bg:#33658A"
-format = '[ ♥ $time ]($style)'
+format = '[ $time ]($style)'
