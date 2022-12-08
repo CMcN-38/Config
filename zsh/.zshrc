@@ -1,5 +1,5 @@
-# THEME
-ZSH_THEME="dracula"
+# Change ZDOTDIR
+ZDOTDIR=~/.config/zsh/
 
 # Case Insensitive Autocomplete
 autoload -U compinit && compinit
